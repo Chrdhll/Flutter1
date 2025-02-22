@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tugas1/Screen/page_dua.dart';
+import 'package:tugas1/Screen/page_empat.dart';
+import 'package:tugas1/Screen/page_satu.dart';
+import 'package:tugas1/Screen/page_tiga.dart';
 
 void main() {
   runApp(const MyApp());
@@ -49,11 +53,111 @@ class PageOne extends StatelessWidget {
         backgroundColor: Colors.indigoAccent,
       ),
       body: Center(
-        child: Text("ini adalah flutter pertama saya \n fadhil \n mi2b \n 2301091006",
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.red),
-            textAlign: TextAlign.center),
-         
-        
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              "ini adalah flutter pertama saya \n fadhil \n mi2b \n 2301091006",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+                color: Colors.black,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: MaterialButton(
+                onPressed: () {
+                  //ini untuk pindah page
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PageSatu()),
+                  );
+                },
+                elevation: 18.0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                //ini untuk pindah page
+                color: Colors.indigoAccent,
+                child: Text(
+                  'page 1',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: MaterialButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PageDua()),
+                  );
+                },
+                elevation: 18.0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                //ini untuk pindah page
+                color: const Color(0xFF536DFE),
+                clipBehavior: Clip.antiAlias,
+                child: Text(
+                  'page 2',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: MaterialButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PageTiga()),
+                  );
+                },
+                elevation: 18.0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                //ini untuk pindah page
+                color: Colors.indigoAccent,
+                child: Text(
+                  'page 3',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: MaterialButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PageEmpat()),
+                  );
+                },
+                elevation: 18.0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                //ini untuk pindah page
+                color: Colors.indigoAccent,
+                child: Text(
+                  'page 4',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+              ),
+            ),
+          ],
+        ),
+
         //child : cuma bisa nampung satu widget
         //children : bisa nampung beberapa widget
       ),
