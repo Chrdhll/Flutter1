@@ -96,6 +96,8 @@ class PageOne extends StatelessWidget {
                     'page 1',
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
+                  minWidth: 300,
+                  height: 30,
                 ),
               ),
 
@@ -119,7 +121,10 @@ class PageOne extends StatelessWidget {
                     'page 2',
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
+                  minWidth: 300,
+                  height: 30,
                 ),
+                
               ),
 
               Padding(
@@ -141,6 +146,8 @@ class PageOne extends StatelessWidget {
                     'page 3',
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
+                  minWidth: 300,
+                  height: 30,
                 ),
               ),
 
@@ -163,6 +170,8 @@ class PageOne extends StatelessWidget {
                     'page 4',
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
+                  minWidth: 300,
+                  height: 30,
                 ),
               ),
 
@@ -185,6 +194,8 @@ class PageOne extends StatelessWidget {
                     'page gambar',
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
+                  minWidth: 300,
+                  height: 30,
                 ),
               ),
 
@@ -207,6 +218,8 @@ class PageOne extends StatelessWidget {
                     'page url image',
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
+                  minWidth: 300,
+                  height: 30,
                 ),
               ),
 
@@ -231,6 +244,8 @@ class PageOne extends StatelessWidget {
                     'page chache image',
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
+                  minWidth: 300,
+                  height: 30,
                 ),
               ),
 
@@ -255,6 +270,8 @@ class PageOne extends StatelessWidget {
                     'page notification',
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
+                  minWidth: 300,
+                  height: 30,
                 ),
               ),
 
@@ -277,6 +294,8 @@ class PageOne extends StatelessWidget {
                     'page list data',
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
+                  minWidth: 300,
+                  height: 30,
                 ),
               ),
 
@@ -301,6 +320,8 @@ class PageOne extends StatelessWidget {
                     'page login',
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
+                  minWidth: 300,
+                  height: 30,
                 ),
               ),
 
@@ -323,6 +344,8 @@ class PageOne extends StatelessWidget {
                     'page tab bar',
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
+                  minWidth: 300,
+                  height: 30,
                 ),
               ),
               Padding(
@@ -344,6 +367,8 @@ class PageOne extends StatelessWidget {
                     'page dosen',
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
+                  minWidth: 300,
+                  height: 30,
                 ),
               ),
             ],
