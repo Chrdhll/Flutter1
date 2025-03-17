@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:tugas1/Screen/latihan/dosen.dart';
+import 'package:tugas1/Screen/latihan/page_tab.dart';
+import 'package:tugas1/Screen/nav_bar/page_tab_bar.dart';
+import 'package:tugas1/Screen/page_list_data.dart';
+import 'package:tugas1/Screen/page_cache_image.dart';
 import 'package:tugas1/Screen/page_dua.dart';
 import 'package:tugas1/Screen/page_empat.dart';
+import 'package:tugas1/Screen/page_gambar.dart';
+import 'package:tugas1/Screen/page_notification.dart';
 import 'package:tugas1/Screen/page_satu.dart';
+import 'package:tugas1/Screen/page_simple_login.dart';
 import 'package:tugas1/Screen/page_tiga.dart';
+import 'package:tugas1/Screen/page_ulr_image.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +24,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Pertama',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -53,113 +62,296 @@ class PageOne extends StatelessWidget {
         backgroundColor: Colors.indigoAccent,
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text(
-              "ini adalah flutter pertama saya \n fadhil \n mi2b \n 2301091006",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-                color: Colors.black,
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                "ini adalah flutter pertama saya",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: Colors.black,
+                ),
+                textAlign: TextAlign.center,
               ),
-              textAlign: TextAlign.center,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: MaterialButton(
-                onPressed: () {
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: MaterialButton(
+                  onPressed: () {
+                    //ini untuk pindah page
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PageSatu()),
+                    );
+                  },
+                  elevation: 18.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
                   //ini untuk pindah page
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => PageSatu()),
-                  );
-                },
-                elevation: 18.0,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                //ini untuk pindah page
-                color: Colors.indigoAccent,
-                child: Text(
-                  'page 1',
-                  style: TextStyle(fontSize: 20, color: Colors.white),
+                  color: Colors.indigoAccent,
+                  child: Text(
+                    'page 1',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
                 ),
               ),
-            ),
 
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: MaterialButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => PageDua()),
-                  );
-                },
-                elevation: 18.0,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                //ini untuk pindah page
-                color: const Color(0xFF536DFE),
-                clipBehavior: Clip.antiAlias,
-                child: Text(
-                  'page 2',
-                  style: TextStyle(fontSize: 20, color: Colors.white),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: MaterialButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PageDua()),
+                    );
+                  },
+                  elevation: 18.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  //ini untuk pindah page
+                  color: const Color(0xFF536DFE),
+                  clipBehavior: Clip.antiAlias,
+                  child: Text(
+                    'page 2',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
                 ),
               ),
-            ),
 
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: MaterialButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => PageTiga()),
-                  );
-                },
-                elevation: 18.0,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                //ini untuk pindah page
-                color: Colors.indigoAccent,
-                child: Text(
-                  'page 3',
-                  style: TextStyle(fontSize: 20, color: Colors.white),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: MaterialButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PageTiga()),
+                    );
+                  },
+                  elevation: 18.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  //ini untuk pindah page
+                  color: Colors.indigoAccent,
+                  child: Text(
+                    'page 3',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
                 ),
               ),
-            ),
 
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: MaterialButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => PageEmpat()),
-                  );
-                },
-                elevation: 18.0,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                //ini untuk pindah page
-                color: Colors.indigoAccent,
-                child: Text(
-                  'page 4',
-                  style: TextStyle(fontSize: 20, color: Colors.white),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: MaterialButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PageEmpat()),
+                    );
+                  },
+                  elevation: 18.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  //ini untuk pindah page
+                  color: Colors.indigoAccent,
+                  child: Text(
+                    'page 4',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
                 ),
               ),
-            ),
-          ],
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: MaterialButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PageGambar()),
+                    );
+                  },
+                  elevation: 18.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  //ini untuk pindah page
+                  color: Colors.indigoAccent,
+                  child: Text(
+                    'page gambar',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: MaterialButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PageUrlImage()),
+                    );
+                  },
+                  elevation: 18.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  //ini untuk pindah page
+                  color: Colors.indigoAccent,
+                  child: Text(
+                    'page url image',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: MaterialButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PageChacheImage(),
+                      ),
+                    );
+                  },
+                  elevation: 18.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  //ini untuk pindah page
+                  color: Colors.indigoAccent,
+                  child: Text(
+                    'page chache image',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: MaterialButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PageNotification(),
+                      ),
+                    );
+                  },
+                  elevation: 18.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  //ini untuk pindah page
+                  color: Colors.indigoAccent,
+                  child: Text(
+                    'page notification',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: MaterialButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PageListData()),
+                    );
+                  },
+                  elevation: 18.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  //ini untuk pindah page
+                  color: Colors.indigoAccent,
+                  child: Text(
+                    'page list data',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: MaterialButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PageSimpleLogin(),
+                      ),
+                    );
+                  },
+                  elevation: 18.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  //ini untuk pindah page
+                  color: Colors.indigoAccent,
+                  child: Text(
+                    'page login',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: MaterialButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PageTabBar()),
+                    );
+                  },
+                  elevation: 18.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  //ini untuk pindah page
+                  color: Colors.indigoAccent,
+                  child: Text(
+                    'page tab bar',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: MaterialButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PageTab()),
+                    );
+                  },
+                  elevation: 18.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  //ini untuk pindah page
+                  color: Colors.indigoAccent,
+                  child: Text(
+                    'page dosen',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+          //child : cuma bisa nampung satu widget
+          //children : bisa nampung beberapa widget
         ),
-
-        //child : cuma bisa nampung satu widget
-        //children : bisa nampung beberapa widget
       ),
     );
   }
